@@ -1,6 +1,6 @@
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(
         to top,
         #F8D04B 50%,
@@ -27,7 +27,7 @@ body{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    height: 700px;
+    height: 100%;
     padding: 10px;
     margin: 20px;
 }
@@ -38,7 +38,7 @@ body{
     border-radius: 5%; 
 }
 .innerbox12{
-    width: 55%;
+    width: 60%;
     height: 100% ;
     border-radius: 5%; 
 }
@@ -56,8 +56,4 @@ body{
     margin-bottom: 20px;
     box-shadow: 5px 5px 5px black;
     
-}
-
-#changeinnerbox2{
-    background-color: null;
 }
