@@ -4,7 +4,15 @@ var getid = document.querySelector("#forest")
 var airquaity = document.querySelector("#air")
 console.log(getid)
 var currentSearch = "";
+const date = new Date();
 
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${day}-${month}-${year}`;
+console.log(currentDate); // "17-6-2022"
 function search(element){
     // console.log(element.value);
     currentSearch = element.value;
@@ -84,12 +92,45 @@ function airqua(data) {
         
     return res;
 }
+
 async function show() {
-    var response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=eff73a53fac3473e8e1182249232502&q=" + currentSearch + "&aqi=no");
-    var coderData = await response.json();
+    
+    var response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=eff73a53fac3473e8e1182249232502&q=" + currentSearch + "&aqi=yes");
+    var coderData = await response.json(); 
     console.log(coderData)
     thisis.innerHTML = makecodercard(coderData.current);
     getid.innerHTML = forecastcard(coderData.forecast.forecastday[0]);
     airquaity.innerHTML = airqua(coderData.current);
 }
 
+var xyValues = [
+    {x:5, y:7},
+    {x:60, y:8},
+    {x:70, y:8},
+    {x:80, y:9},
+    {x:90, y:9},
+    {x:100, y:9},
+    {x:110, y:10},
+    {x:120, y:11},
+    {x:130, y:14},
+    {x:140, y:14},
+    {x:150, y:15}
+  ];
+  
+  new Chart("myChart", {
+    type: "scatter",
+    data: {
+      datasets: [{
+        pointRadius: 4,
+        pointBackgroundColor: "rgb(0,0,255)",
+        data: xyValues
+      }]
+    },
+    options: {
+      legend: {display: false},
+      scales: {
+        xAxes: [{ticks: {min: 1, max:24}}],
+        yAxes: [{ticks: {min: 1, max:43}}],
+      }
+    }
+  });

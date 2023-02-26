@@ -5,6 +5,15 @@ from flask_bcrypt import Bcrypt
 
 
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/home')
+def home():
+    return redirect('/')
+
+@app.route('/hourly')
+def weatherhourly():
+    return render_template('hourlyweather.html')
