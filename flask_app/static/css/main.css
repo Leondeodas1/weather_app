@@ -1,0 +1,75 @@
+* {
+    padding:0;
+    margin:0 
+
+}
+
+
+@font-face {
+    font-family: "pacifico";
+    src: url("Pacifico-Regular.ttf");
+}
+@font-face {
+    font-family: "smooth";
+    src:url("typefaces/EBGaramond-Bold.ttf")
+}
+
+@font-face {
+    font-family: "legible";
+    src: url("Satisfy-Regular.ttf");
+}
+body{
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(
+        to top,
+        #F8D04B 50%,
+        paleturquoise 100%
+    );
+} 
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    margin: auto;
+    padding: 30px;
+    width: 50%;
+} 
+
+.container{
+    margin-top: 50px;
+}
+
+.top{
+    font-family: "pacifico";
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+
+}
+form{
+    color: grey;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.box2 {
+    /* style="border-radius: 5%; width: 350px; border-style: solid; padding: 10px; margin: 10px; height: 300px;" */
+    border-radius: 5px;
+    width:fit-content;
+    border-style:solid;
+    padding: 5px;
+    margin-left:30px;
+    height:fit-content;
+
+}
