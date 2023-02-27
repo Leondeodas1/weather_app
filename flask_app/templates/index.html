@@ -9,7 +9,7 @@
     <link rel = "stylesheet" href = "{{url_for('static',filename = '../static/css/index.css')}}">
     <title>Document</title>
 </head>
-<body>
+<body  onload="myFunction()">
     <div class="container1">
         <div class="innerbox1">
             <div class="innerbox2" id="changeinnerbox2">
@@ -66,6 +66,10 @@
         </div>
     </div>
 
+<button onclick="getLocation()"></button>
+
+<p id="demo"></p>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/current.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/search.js') }}"></script>
 </body>
 </html>
