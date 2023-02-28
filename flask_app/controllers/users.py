@@ -14,3 +14,4 @@ def getregir():
 @app.route("/getreg")
 def getreg():
     return redirect("/register")
+
