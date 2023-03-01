@@ -24,6 +24,9 @@
             <div class="innerbox2" id="changeinnerbox2">
                 <button>login</button>
             </div>
+            <div class="innerbox2" id="changeinnerbox2">
+                <button onclick="changecolor(this)">dark Mode</button>
+            </div>
         </div>
         <div class="innerbox12">
             <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
@@ -31,7 +34,7 @@
     </div>
 
     
-
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/darkmode.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='javascript/search.js') }}"></script>
 </body>
