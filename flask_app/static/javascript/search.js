@@ -13,7 +13,7 @@ var currentSearch = "";
 function search(element){
     // console.log(element.value);
     currentSearch = element.value;
-    console.log(currentSearch)
+    // console.log(currentSearch)
 }
 
 function makecodercard(data) {
@@ -98,7 +98,7 @@ const d6 = new Date(data[6].date);
 
 
 
-console.log(d)
+// console.log(d)
 let day = weekday[d.getDay()];
 let day1 = weekday[d1.getDay()];
 let day2 = weekday[d2.getDay()];
@@ -106,7 +106,7 @@ let day3 = weekday[d3.getDay()];
 let day4 = weekday[d4.getDay()];
 let day5 = weekday[d5.getDay()];
 let day6 = weekday[d6.getDay()];
-console.log(day)
+// console.log(day)
 
     var res = `
         <div class="innerbox2" id="weatherweeks" >
@@ -173,7 +173,7 @@ console.log(day)
 async function show() {
     var response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=eff73a53fac3473e8e1182249232502&q=" + currentSearch + "&days=7&aqi=yes");
     var coderData = await response.json(); 
-    console.log(coderData)
+    // console.log(coderData)
     thisis.innerHTML = makecodercard(coderData.current);
     getid.innerHTML = forecastcard(coderData.forecast.forecastday[0]);
     airquaity.innerHTML = airqua(coderData.current);
@@ -191,7 +191,7 @@ const successCallback = (position) => {
         return response.json();
     })
     .then(users => {
-        console.log(users)
+        // console.log(users)
     thisis.innerHTML = makecodercard(users.current);
     getid.innerHTML = forecastcard(users.forecast.forecastday[0]);
     airquaity.innerHTML = airqua(users.current);
@@ -206,34 +206,34 @@ const errorCallback = (error) => {
 navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 
-var xyValues = [
-    {x:5, y:7},
-    {x:60, y:8},
-    {x:70, y:8},
-    {x:80, y:9},
-    {x:90, y:9},
-    {x:100, y:9},
-    {x:110, y:10},
-    {x:120, y:11},
-    {x:130, y:14},
-    {x:140, y:14},
-    {x:150, y:15}
-  ];
+// var xyValues = [
+//     {x:5, y:7},
+//     {x:60, y:8},
+//     {x:70, y:8},
+//     {x:80, y:9},
+//     {x:90, y:9},
+//     {x:100, y:9},
+//     {x:110, y:10},
+//     {x:120, y:11},
+//     {x:130, y:14},
+//     {x:140, y:14},
+//     {x:150, y:15}
+//   ];
   
-  new Chart("myChart", {
-    type: "scatter",
-    data: {
-      datasets: [{
-        pointRadius: 4,
-        pointBackgroundColor: "rgb(0,0,255)",
-        data: xyValues
-      }]
-    },
-    options: {
-      legend: {display: false},
-      scales: {
-        xAxes: [{ticks: {min: 1, max:24}}],
-        yAxes: [{ticks: {min: 1, max:43}}],
-      }
-    }
-  });
+//   new Chart("myChart", {
+//     type: "scatter",
+//     data: {
+//       datasets: [{
+//         pointRadius: 4,
+//         pointBackgroundColor: "rgb(0,0,255)",
+//         data: xyValues
+//       }]
+//     },
+//     options: {
+//       legend: {display: false},
+//       scales: {
+//         xAxes: [{ticks: {min: 1, max:24}}],
+//         yAxes: [{ticks: {min: 1, max:43}}],
+//       }
+//     }
+//   });
