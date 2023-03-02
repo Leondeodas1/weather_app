@@ -6,8 +6,6 @@ I wanted to learn how to make apps using Javascript.  I got hugh inspireation fr
 
 
 Development stack
-Flow was enabled to catch typing errors in React Native JavaScript code
-
 I used  Visual Studio Code on windows 11
 I used GitHub to save the progress of the app.
 Currently only tested on an Desktop
